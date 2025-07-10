@@ -1,5 +1,5 @@
 let api = axios.create({
-    baseURL: ""
+    baseURL: "https://686e4873c9090c49538903ef.mockapi.io"
 });
 
 let box = document.querySelector(".form")
@@ -8,26 +8,22 @@ let img = document.querySelector(".image")
 let age = document.querySelector(".age")
 let btn = document.querySelector(".button")
 
-
 btn.addEventListener("click", () => {
     let user = {
         name: ism.value,
         img: img.value,
-        age: age.vlaue,
+        age: age.value,
     }
-
-    
-
-    ism.value = "";
-    img.value = "";
-    img.value = "";
 
     createData(user)
 
-    window.location.href = "./users.html";
+    ism.value = "";
+    img.value = "";
+    age.value = "";
+
+    alert("Registered Succesfully")
 });
 
 async function createData(obj) {
-  await api.post("/users", obj);
-  getData();
+  await api.post("/prods", obj);
 }
