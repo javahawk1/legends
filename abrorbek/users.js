@@ -1,27 +1,19 @@
+let root = document.getElementById("root")
 
+async function show() {
+    let data =  await fetch("https://686e4873c9090c49538903ef.mockapi.io/prods")
+    let json = await data.json()
 
+    json.forEach((item) => {
+        root.insertAdjacentHTML("beforeend", `
+           <div class="card">
+                <img src=${item.image} alt="rasm">
+                <p>Username: ${item.name}</p>
+                <p>Age: ${item.age}</p>
+            </div> 
+            `)
+    })
 
+}
 
-
-
-const api = axios.create({
-    baseURL: "https://686faa8991e85fac42a2043f",
-
-});
-
-image = document.querySelector(".image")
-title = document.querySelector(".title");
-names  = document.querySelector(".names");
-malumot = document.querySelector(".malumot")
-
-
- function showData(data) {
-    btn.textContent = "";
-    data.forEach(e => {
-        image: image.value
-        // title: title.value,
-        // names: names.value
-
-    });
-
- }
+show()

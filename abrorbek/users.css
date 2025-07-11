@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');    
+
+.root {
+    padding: 100px;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.card {
+    width: 28%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: 600;  
+    margin: 10px 0; 
+}
+
+.card img {
+    width: 100%;
+}
